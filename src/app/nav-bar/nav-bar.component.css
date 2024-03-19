@@ -1,0 +1,83 @@
+.navigation{
+    position: relative;
+    width: 400px;
+    height: 100px;
+}
+.navigation ul{
+    display: flex;
+    padding: 0;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* text-align: center; */
+}
+.navigation ul li a img{
+    position: relative;
+    width: 50px;
+    line-height: 75px;
+}
+.navigation ul li.active a img{
+    width: 60px;
+    transform: translateY(-15px);
+    transition: 0.5s;
+}
+.navigation ul li a .text{
+    position: absolute;
+    font-size: 15px;
+    bottom: 15px;
+    font-weight: 400;
+    transition: 0.25s;
+    text-transform: uppercase;
+    transform: scale(0);
+
+}
+.navigation ul li.active a .text{
+    transform: scale(1);
+    transform: translateY(25px);
+    font-size: 20px;
+    transition: 0.5s;
+}
+.indicator{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+    background: rgb(248, 44, 44);
+    box-shadow: 0 15px 25px rgb(255, 86, 86);
+    transform: translateX(calc(100px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    background: rgb(248, 235, 44);
+    box-shadow: 0 15px 25px rgb(241, 255, 86);
+    transform: translateX(calc(100px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    background: rgb(44, 166, 248);
+    box-shadow: 0 15px 25px rgb(86, 179, 255);
+    transform: translateX(calc(100px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    background: rgb(248, 44, 190);
+    box-shadow: 0 15px 25px rgb(244, 86, 255);
+    transform: translateX(calc(100px * 3));
+}

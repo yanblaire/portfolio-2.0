@@ -1,0 +1,31 @@
+<div class="navigation">
+    <ul>
+        <li class="list" [class.active]="isActive('home')" (mouseover)="setActive('home')">
+            <a href="#">
+                <img src="../../assets/navBar/icons8-home-100.png" alt="">
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list" [class.active]="isActive('about')" (mouseover)="setActive('about')">
+            <a href="#">
+                <img src="../../assets/navBar/icons8-about-50.png" alt="">
+                <span class="text">About</span>
+            </a>
+        </li>
+        <li class="list" [class.active]="isActive('work')" (mouseover)="setActive('work')">
+            <a href="#">
+                <img src="../../assets/navBar/icons8-my-computer-48.png" alt="">
+                <span class="text">Work</span>
+            </a>
+        </li>
+        <li class="list" [class.active]="isActive('contact')" (mouseover)="setActive('contact')">
+            <a href="#">
+                <img src="../../assets/navBar/icons8-contact-50.png" alt="">
+                <span class="text">Contact</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+</div>
+
+

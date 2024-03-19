@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Bebas";
+    src: url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+    font-family: "Nanum";
+    src: url("../assets/fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf");
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background-color: rgb(38, 40, 43);
+}
+.wrapper div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background{
+    transform: translateZ(-10px) scale(2);
+}
+.title{
+    transform: translateZ(-5px) scale(1.5);
+}
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.title{
+    position: absolute;
+    left: -150px;
+    top: -100px;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-family: Nanum;
+}
+.title1{
+    position: absolute;
+    top: 400px;
+    font-size: 60px;
+}
+.title2{
+    position: absolute;
+    top: 110px;
+    font-family: Bebas;
+    font-size: 130px;
+}
+app-nav-bar{
+    position: absolute;
+    top: 10px;
+}
+
+/* section 2 style */
+.section2{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/maroonBells.JPG");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2Foreground{
+    width: 100vw;
+    height: 109vh;
+    background-image: url("../assets/section2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.section2Content{
+    z-index: 1;
+    display: grid;
+    position: relative;
+    width: 80vw;
+}
+.section2Content h2{
+    position: absolute;
+    top: -5vh;
+    left: 20vw;
+    font-family: Bebas;
+    color: white;
+    font-size: 8vw;
+}
+.section2Content img{
+    width: 18vw;
+    height: auto;
+    border-radius: 100px;
+    border: 3px solid white;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 18vh;
+}
+.section2Content p{
+    width: 50vw;
+    margin: 0;
+    position: absolute;
+    left: 8vw;
+    color: white;
+    padding: 10px;
+    font-family: Nanum;
+    font-size: 1.7vw;
+
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+/* section 3 style */
+.section3{
+    height: auto;
+    background-color: rgb(38, 40, 43);
+    padding-bottom: 10vh;
+}

@@ -1,0 +1,175 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 10vh;
+    padding: 0px;
+    color: white;
+}
+h1{
+    font-size: 50px;
+}
+.topLine{
+    width: 40vw;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+.bottomLine{
+    width: 40vw;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin-right: auto;
+    margin-top: 20px;
+}
+img{
+    width: 15vw;
+    height: auto;
+}
+
+.middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.part{
+    text-align: center;
+}
+
+.container, .container1, .container2, .container3{
+    width: 15vw;
+    height: auto;
+    padding: 10px;
+    border: 3px solid white;
+    transition: 1s;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(38, 40, 43);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .container:hover .overlay {
+    width: 100%;
+  }
+  
+  .text {
+    white-space: nowrap; 
+    color: var(--clr);
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+/* image2 */
+  .overlay1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(38, 40, 43);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  .container1:hover .overlay1 {
+    height: 100%;
+  }
+/* image3 */
+  .overlay2 {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(38, 40, 43);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  .container2:hover .overlay2 {
+    bottom: 0;
+    height: 100%;
+  }
+/* image4 */
+  .overlay3 {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgb(38, 40, 43);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .container3:hover .overlay3 {
+    width: 100%;
+    left: 0;
+  }
+
+
+/* effect */
+
+.container:hover, .container1:hover, .container2:hover, .container3:hover {
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    color: var(--clr);
+}
+
+.effect{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.effect::before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(38, 40, 43);
+    border: 5px solid var(--clr);
+    transition: 0.5s;
+}
+.animation:hover .effect::before{
+    left: 0%;
+    transform: translateX(-50%) rotate(90deg);
+    box-shadow: 280px 0px var(--clr);
+}
+.effect::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(38, 40, 43);
+    border: 5px solid var(--clr);
+    transition: 0.5s;
+}
+.animation:hover .effect::after{
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 200px -200px var(--clr);
+}
